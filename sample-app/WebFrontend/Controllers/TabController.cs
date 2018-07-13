@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using Cafe.Tab;
-using WebFrontend.ActionFilters;
-using WebFrontend.Models;
+using WebFrontEnd.ActionFilters;
+using WebFrontEnd.Models;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 
-namespace WebFrontend.Controllers
+namespace WebFrontEnd.Controllers
 {
-    [IncludeLayoutData]
+   [IncludeLayoutData]
     public class TabController : Controller
     {
         public ActionResult Open()
@@ -86,7 +86,7 @@ namespace WebFrontend.Controllers
         }
 
 
-        public ActionResult MarkServed(int id, FormCollection form)
+        public ActionResult MarkServed(int id, IFormCollection form)
         {
             var tabId = Domain.OpenTabQueries.TabIdForTable(id);
             var menuNumbers = (from entry in form.Keys.Cast<string>()

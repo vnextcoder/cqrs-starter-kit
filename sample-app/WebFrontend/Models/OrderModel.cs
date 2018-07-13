@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebFrontend.Models
+namespace WebFrontEnd.Models
 {
     public class OrderModel
     {

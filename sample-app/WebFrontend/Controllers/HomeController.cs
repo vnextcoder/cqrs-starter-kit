@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebFrontend.ActionFilters;
+using Microsoft.AspNetCore.Mvc;
+using WebFrontEnd.ActionFilters;
 
-namespace WebFrontend.Controllers
+namespace WebFrontEnd.Controllers
 {
     [IncludeLayoutData]
     public class HomeController : Controller

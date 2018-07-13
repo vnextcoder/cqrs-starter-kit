@@ -1,4 +1,4 @@
-﻿namespace WebFrontend.Models
+﻿namespace WebFrontEnd.Models
 {
     public class CloseModel
     {

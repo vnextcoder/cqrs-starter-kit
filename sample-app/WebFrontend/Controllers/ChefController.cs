@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿
 using Cafe.Tab;
 using System.Text.RegularExpressions;
-using WebFrontend.ActionFilters;
+using WebFrontEnd.ActionFilters;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using System.Linq;
 
-namespace WebFrontend.Controllers
+namespace WebFrontEnd.Controllers
 {
-    [IncludeLayoutData]
+   [IncludeLayoutData]
     public class ChefController : Controller
     {
         public ActionResult Index()
@@ -17,7 +17,8 @@ namespace WebFrontend.Controllers
             return View(Domain.ChefTodoListQueries.GetTodoList());
         }
 
-        public ActionResult MarkPrepared(Guid id, FormCollection form)
+        [HttpPost]
+        public ActionResult MarkPrepared(Guid id, IFormCollection form)
         {
             Domain.Dispatcher.SendCommand(new MarkFoodPrepared
             {

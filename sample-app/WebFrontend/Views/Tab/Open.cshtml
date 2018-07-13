@@ -15,7 +15,7 @@
     <label>
       Waiter/Waitress
     </label>
-    @Html.DropDownListFor(m => m.Waiter, (ViewBag.WaitStaff as List<string>)
+    @Html.DropDownListFor(m => m.Waiter, (ViewData["WaitStaff"] as List<string>)
         .Select(w => new SelectListItem { Text = w, Value = w }))
     <br>
 

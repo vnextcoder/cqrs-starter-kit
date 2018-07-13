@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebFrontend.ActionFilters;
-
-namespace WebFrontend.Controllers
+using WebFrontEnd.ActionFilters;
+using Microsoft.AspNetCore.Mvc;
+namespace WebFrontEnd.Controllers
 {
-    [IncludeLayoutData]
+       [IncludeLayoutData]
     public class WaitStaffController : Controller
     {
         public ActionResult Todo(string id)

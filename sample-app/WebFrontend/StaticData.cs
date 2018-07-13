@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebFrontend
+namespace WebFrontEnd
 {
     public static class StaticData
     {

@@ -6,7 +6,7 @@ using Edument.CQRS;
 using CafeReadModels;
 using Cafe.Tab;
 
-namespace WebFrontend
+namespace WebFrontEnd
 {
     public static class Domain
     {
